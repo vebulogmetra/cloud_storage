@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "cloud-storage"
+version = "0.1.0"
+description = "Cloud Storage"
+authors = ["Artem <vebulogmetra@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+loguru = "^0.7.2"
+aiogram = "2.13"
+python-dotenv = "^1.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.1.0"
+flake8-pyproject = "^1.2.3"
+isort = "^5.12.0"
+black = "^23.10.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+line_length = 90
+force_grid_wrap = 2
+
+[tool.black]
+line-length = 90
+target-version = ['py310']
+
+[tool.flake8]
+exclude = [".git", ".pytest_cache", "tests", "__pycache__", "env", "venv", ".venv"]
+max-line-length = 90
+max-complexity = 4
+ignore = ["W503"]
